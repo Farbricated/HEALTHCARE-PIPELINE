@@ -1,0 +1,11 @@
+product_id,product_name,batch_number,quantity,unit_price,warehouse_location,expiry_date,manufacture_date,status
+PROD001,Paracetamol 500mg,BATCH-202401,5000,2.50,Warehouse A,2025-12-31,2024-01-15,active
+PROD002,Amoxicillin 250mg,BATCH-202402,3000,5.75,Warehouse B,2025-06-30,2024-02-01,active
+PROD003,Insulin Injection,BATCH-202403,1500,25.00,Warehouse A,2025-03-31,2024-03-01,active
+PROD004,Aspirin 100mg,BATCH-202404,8000,1.50,Warehouse C,2026-01-31,2024-01-20,active
+PROD005,Vitamin D3,BATCH-202405,2000,8.00,Warehouse B,2025-09-30,2024-04-01,active
+PROD006,Blood Pressure Monitor,BATCH-202406,500,150.00,Warehouse A,2027-12-31,2024-05-01,active
+PROD007,Surgical Gloves,BATCH-202407,10000,0.50,Warehouse C,2025-08-31,2024-06-01,active
+PROD008,Face Masks N95,BATCH-202408,15000,3.00,Warehouse A,2025-11-30,2024-07-01,active
+PROD009,Thermometer Digital,BATCH-202409,800,25.00,Warehouse B,2026-06-30,2024-08-01,active
+PROD010,Bandages Roll,BATCH-202410,5000,2.00,Warehouse C,2026-03-31,2024-09-01,active
