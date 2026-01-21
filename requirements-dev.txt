@@ -1,0 +1,15 @@
+-r requirements.txt
+
+# Development tools
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0
+isort==5.13.2
+
+# Jupyter
+jupyter==1.0.0
+ipykernel==6.28.0
+notebook==7.0.6
+
+# Additional testing
+faker==22.0.0
