@@ -76,4 +76,37 @@ class PerformanceMonitor:
         self.metrics = {
             'execution_time_seconds': round(execution_time, 2),
             'execution_time_minutes': round(execution_time / 60, 2),
-            'timestamp': datetime.now
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        logger.info(f"Performance monitoring stopped. Execution time: {execution_time:.2f}s")
+        return self.metrics
+
+
+class DataQualityMetrics:
+    """Track data quality metrics over time"""
+    
+    def __init__(self):
+        self.history = []
+    
+    def record_quality_score(self, df: pd.DataFrame, pipeline_name: str):
+        """Record quality metrics for a dataset"""
+        metrics = {
+            'pipeline_name': pipeline_name,
+            'timestamp': datetime.now().isoformat(),
+            'record_count': len(df),
+            'null_count': df.isnull().sum().sum(),
+            'null_percentage': (df.isnull().sum().sum() / (len(df) * len(df.columns))) * 100,
+            'duplicate_count': df.duplicated().sum(),
+            'columns': len(df.columns)
+        }
+        
+        self.history.append(metrics)
+        return metrics
+    
+    def get_quality_trends(self) -> pd.DataFrame:
+        """Get quality trends over time"""
+        if not self.history:
+            return pd.DataFrame()
+        
+        return pd.DataFrame(self.history)
